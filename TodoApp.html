@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TodoApp</title>
+		<link rel="stylesheet" href="main.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<div class="grid-container">
+			<div class="header">
+				<div></div>
+			</div>
+			<div class="navbar">
+				<ul>
+				  <li><a href='#' onclick="showTodoList()" >TODO</a></li>
+				  <li><a href="#"  onclick="showUser()">User</a></li>
+				  <li><a href="#" onclick="showContact()">Contact</a></li>
+				  <li><a href="#" onclick="showAbout()">About</a></li>
+				</ul>
+			</div>
+			<div class="main">
+				<div id="todo-content">
+					<div class="search-container" id="search-bar">
+					  <input type="text" placeholder="Search.." name="search" list="listItems" id="search-item">
+					  <datalist id="listItems">
+					  </datalist>
+					  <button ><i class="fa fa-search"></i></button>
+					  <button id="add-button" onclick="addToList()">Add</button>
+					</div>	
+					<table id="todo-table">
+						<tr>
+							<th>ToDo List</th>
+							<th>Actions</th>
+						</tr>
+					</table>
+				</div>
+				<div id="user-content">
+					<strong>User Data</strong>
+				</div>
+				<div id="contact-content">
+					<strong>Contact</strong>
+				</div>
+				<div id="about-content">
+					<strong>About</strong>
+				</div>
+			</div>
+			<div class="footer"></div>
+		</div>
+		<script type="text/javascript" src="main.js"></script>
+	</body>
+</html>
