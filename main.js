@@ -63,8 +63,10 @@ function addToList(){
 
 	var listItem=document.getElementById("listItems");
 	var optionTag=document.createElement("option");
-	optionTag.setAttribute('value',"pTag.innerHTML");
+	optionTag.setAttribute('value',item);
 	listItem.appendChild(optionTag);
+
+	document.getElementById("search-item").value="";
 
 }
 
@@ -78,6 +80,8 @@ function editData(element){
 	child[0].style.display="none";
 	child[1].style.display="block";
 	child[1].value = child[0].innerHTML;
+
+
 	toggleToSave(element);
 
 }
@@ -99,6 +103,32 @@ function saveData(element){
 	
 	child[0].innerHTML=child[1].value;
 	child[0].style.display="block";
+
+
+	var listItem=document.getElementById("listItems");
+	var optionTag=document.createElement("option");
+	optionTag.setAttribute('value',child[0].innerHTML);
+	listItem.appendChild(optionTag);
+	
 	toggleToEdit(element);
 
+}
+
+function searchElement(){
+
+	var searchItem=document.getElementById("search-item").value;
+	var rows=document.getElementById("todo-table").rows;
+	console.log(rows);
+
+	for(let i = 1; i < rows.length; i++)
+	{
+		var td=rows[i].cells;
+		console.log(td);
+		var pTag=td[0].childNodes;
+		var data=pTag[0].innerHTML;
+		if(data!=searchItem)
+			rows[i].style.display="none";
+		else
+			rows[i].style.display="table-row";
+	}
 }

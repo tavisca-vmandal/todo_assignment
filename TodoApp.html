@@ -9,7 +9,7 @@
 	<body>
 		<div class="grid-container">
 			<div class="header">
-				<div></div>
+				<div>TODO</div>
 			</div>
 			<div class="navbar">
 				<ul>
@@ -22,16 +22,16 @@
 			<div class="main">
 				<div id="todo-content">
 					<div class="search-container" id="search-bar">
-					  <input type="text" placeholder="Search.." name="search" list="listItems" id="search-item">
+					  <input type="text" placeholder="Search.." name="search" list="listItems" id="search-item" autocomplete="off">
 					  <datalist id="listItems">
 					  </datalist>
-					  <button ><i class="fa fa-search"></i></button>
+					  <button id="search-button" onclick="searchElement()" ><i class="fa fa-search"></i></button>
 					  <button id="add-button" onclick="addToList()">Add</button>
 					</div>	
 					<table id="todo-table">
 						<tr>
-							<th>ToDo List</th>
-							<th>Actions</th>
+							<td>ToDo List</td>
+							<td>Actions</td>
 						</tr>
 					</table>
 				</div>
@@ -45,7 +45,7 @@
 					<strong>About</strong>
 				</div>
 			</div>
-			<div class="footer"></div>
+			<div class="footer"><div>@Vikas Prasad Mandal</div></div>
 		</div>
 		<script type="text/javascript" src="main.js"></script>
 	</body>
